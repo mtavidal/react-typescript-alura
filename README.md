@@ -1,6 +1,6 @@
 # Formação: Gerencie aplicações React com Typescript | ALURA
 
-Repositório com os exercícios e projetos proposto pela alura na formação: Gerencie aplicações React com Typescript, da escola Front-End da Alura, que contem 8 cursos.
+Repositório com os exercícios e projetos propostos pela Alura na formação: Gerencie aplicações React com Typescript, da escola Front-End, que contém 8 cursos.
 
 ---
 
