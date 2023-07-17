@@ -9,3 +9,4 @@ Repositório com os exercícios e projetos propostos pela Alura na formação: G
 1. React: escrevendo com Typescript
    - Projeto: alura-studies.
 2. React: lidando com arquivos estáticos
+   - Projeto: aluroni.
