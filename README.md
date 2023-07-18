@@ -10,3 +10,5 @@ Repositório com os exercícios e projetos propostos pela Alura na formação: G
    - Projeto: alura-studies.
 2. React: lidando com arquivos estáticos
    - Projeto: aluroni.
+3. React: Conhecendo a biblioteca React Router
+   - Projeto: aluroni-router.
