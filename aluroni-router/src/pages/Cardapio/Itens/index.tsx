@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Item from './Item';
 import styles from './Itens.module.scss';
 import cardapio from 'data/cardapio.json';
+import { Cardapio } from 'types/Prato';
 
 interface ItensProps {
   ordenador: string;
@@ -21,7 +22,7 @@ export default function Itens({ ordenador, busca, filtro }: ItensProps) {
     return true;
   }
 
-  function ordenar(novaLista: typeof cardapio) {
+  function ordenar(novaLista: Cardapio) {
     const ordenarPropriedadeCrescente = (
       lista: typeof cardapio,
       propriedade: keyof (typeof cardapio)[0]
