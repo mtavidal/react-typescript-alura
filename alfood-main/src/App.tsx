@@ -4,6 +4,8 @@ import VitrineRestaurantes from './paginas/VitrineRestaurantes';
 import AdministracaoRestaurantes from './paginas/AdministracaoRestaurantes';
 import FormularioRestaurante from './paginas/FormularioRestaurante.tsx';
 import PaginaBaseAdmin from './paginas/PaginaBaseAdmin';
+import AdministracaoPratos from './paginas/AdministracaoPratos';
+import FormularioPratos from './paginas/FormularioPratos';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
         <Route path="restaurantes" element={<AdministracaoRestaurantes />} />
         <Route path="restaurantes/novo" element={<FormularioRestaurante />} />
         <Route path="restaurantes/:id" element={<FormularioRestaurante />} />
+        <Route path="pratos" element={<AdministracaoPratos />} />
+        <Route path="pratos/novo" element={<FormularioPratos />} />
+        <Route path="pratos/:id" element={<FormularioPratos />} />
       </Route>
     </Routes>
   );
