@@ -10,15 +10,15 @@ import {
 } from '@mui/material';
 import IRestaurante from '../../interfaces/IRestaurante';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
+import api from '../../lib/axios';
 
 export default function AdministracaoRestaurantes() {
   const [restaurantes, setRestaurantes] = useState<IRestaurante[]>([]);
 
   useEffect(() => {
-    axios
-      .get<IRestaurante[]>(' http://localhost:8000/api/v2/restaurantes/')
+    api
+      .get<IRestaurante[]>('restaurantes/')
       .then((resposta) => {
         setRestaurantes(resposta.data);
       })
@@ -28,16 +28,12 @@ export default function AdministracaoRestaurantes() {
   }, []);
 
   function excluirRestaurante(restauranteAserExcluido: IRestaurante) {
-    axios
-      .delete(
-        `http://localhost:8000/api/v2/restaurantes/${restauranteAserExcluido.id}/`
-      )
-      .then(() => {
-        const listaRestaurante = restaurantes.filter(
-          (restaurante) => restaurante.id !== restauranteAserExcluido.id
-        );
-        setRestaurantes([...listaRestaurante]);
-      });
+    api.delete(`restaurantes/${restauranteAserExcluido.id}/`).then(() => {
+      const listaRestaurante = restaurantes.filter(
+        (restaurante) => restaurante.id !== restauranteAserExcluido.id
+      );
+      setRestaurantes([...listaRestaurante]);
+    });
   }
 
   return (
@@ -54,7 +50,6 @@ export default function AdministracaoRestaurantes() {
           {restaurantes.map((restaurante) => (
             <TableRow key={restaurante.id}>
               <TableCell>{restaurante.nome}</TableCell>
-              <TableCell>Nome</TableCell>
               <TableCell>
                 [
                 <Link to={`/admin/restaurantes/${restaurante.id}`}>editar</Link>{' '}
