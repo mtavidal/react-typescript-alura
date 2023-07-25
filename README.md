@@ -14,3 +14,5 @@ Repositório com os exercícios e projetos propostos pela Alura na formação: G
    - Projeto: aluroni-router.
 4. React: Integrando seu projeto React com Apis
    - Projeto: alfood.
+5. React: Entendendo a Web por baixo dos panos
+   - Projeto: alura-books.
