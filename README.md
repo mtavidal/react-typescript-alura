@@ -16,3 +16,7 @@ Repositório com os exercícios e projetos propostos pela Alura na formação: G
    - Projeto: alfood.
 5. React: Entendendo a Web por baixo dos panos
    - Projeto: alura-books.
+6. React: Gerenciando estado com Recoil
+   - Projeto: event-tracker
+7. React: Testando os seus componentes
+   - Projeto: sorteador-de-amigo-secreto
