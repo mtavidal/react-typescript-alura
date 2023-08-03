@@ -9,7 +9,7 @@ const Sorteio = () => {
   const participantes = useListaDeParticipantes();
 
   const [participanteDaVez, setParticipanteDaVez] = useState('');
-  const [amigoScreto, setAmigoSecreto] = useState('');
+  const [amigoSecreto, setAmigoSecreto] = useState('');
 
   const resultado = useResultadoSorteio();
 
@@ -17,6 +17,9 @@ const Sorteio = () => {
     evento.preventDefault();
     if (resultado.has(participanteDaVez)) {
       setAmigoSecreto(resultado.get(participanteDaVez)!);
+      setTimeout(() => {
+        setAmigoSecreto('');
+      }, 5000);
     }
   };
 
@@ -41,9 +44,9 @@ const Sorteio = () => {
           <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
           <button className="botao-sortear">Sortear</button>
         </form>
-        {amigoScreto && (
+        {amigoSecreto && (
           <p className="resultado" role="alert">
-            {amigoScreto}
+            {amigoSecreto}
           </p>
         )}
         <footer className="sorteio">
