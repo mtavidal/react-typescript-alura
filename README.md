@@ -20,3 +20,5 @@ Repositório com os exercícios e projetos propostos pela Alura na formação: G
    - Projeto: event-tracker
 7. React: Testando os seus componentes
    - Projeto: sorteador-de-amigo-secreto
+8. React: Otimizando a performance
+   - Projeto: aluroni-performance
